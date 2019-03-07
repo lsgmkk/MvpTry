@@ -1,5 +1,7 @@
 package com.androidtv.mvptry;
 
+import android.view.View;
+
 import com.androidtv.mvptry.mvp.base.BaseMvpActivity;
 import com.androidtv.mvptry.mvp.bean.LoginBean;
 import com.androidtv.mvptry.mvp.contract.LoginContract;
@@ -30,7 +32,12 @@ public class LoginActivity extends BaseMvpActivity<LoginPresenter, LoginModel> i
 
     @Override
     protected void initView() {
-
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.login("", "");
+            }
+        });
     }
 
     @Override
