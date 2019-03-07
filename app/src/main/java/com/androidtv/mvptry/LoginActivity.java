@@ -1,0 +1,55 @@
+package com.androidtv.mvptry;
+
+import com.androidtv.mvptry.mvp.base.BaseMvpActivity;
+import com.androidtv.mvptry.mvp.bean.LoginBean;
+import com.androidtv.mvptry.mvp.contract.LoginContract;
+import com.androidtv.mvptry.mvp.model.LoginModel;
+import com.androidtv.mvptry.mvp.presenter.LoginPresenter;
+
+public class LoginActivity extends BaseMvpActivity<LoginPresenter, LoginModel> implements LoginContract.View {
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected LoginPresenter getPresenter() {
+        return new LoginPresenter();
+    }
+
+    @Override
+    protected LoginModel getModel() {
+        return new LoginModel();
+    }
+
+    @Override
+    protected void initDate() {
+
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    public void netStart() {
+
+    }
+
+    @Override
+    public void netError(String msg) {
+
+    }
+
+    @Override
+    public void netEnd() {
+
+    }
+
+    @Override
+    public void getLogin(LoginBean loginBean) {
+
+    }
+}
